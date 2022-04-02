@@ -6,7 +6,7 @@
 
 > Making bash file executable
 
-(Shebang)[https://en.wikipedia.org/wiki/Shebang_%28Unix%29] - article on wiki
+[Shebang](https://en.wikipedia.org/wiki/Shebang_%28Unix%29) - article on wiki
 
 ```bash
 chmod +x example.bash
@@ -20,7 +20,7 @@ chmod +x example.bash
 
 > Global variables example
 
-(List)[https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_] of global variables
+[List](https://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_02.html#sect_03_02_) of global variables
 
 ```bash
 echo "Hello, $(whoami), directory: $PWD"
