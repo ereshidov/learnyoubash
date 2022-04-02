@@ -91,5 +91,35 @@ fruits=(Banana ${fruits[*]}  Mango)
 unset fruits[0]
 ```
 
+# Shell expansions [more about shell expansions](https://www.gnu.org/software/bash/manual/bash.html#Shell-Expan)
 
+> Brace expansion
+
+```bash
+
+echo beg{i, a, u}n # begin began begun
+echo {0..5} # 0 1 2 3 4 5
+```
+
+> Command substitution
+
+[Some details](https://unix.stackexchange.com/a/440123)
+
+```bash
+s=123
+echo "hello $(s=world; echo "$s")"
+
+#output: hello world
+
+echo "$s"
+
+#output: 123
+```
+
+> Arithmetic expansion
+
+```bash
+result=((((10+5*3) - 7) / 2))
+echo $result #9
+```
 
