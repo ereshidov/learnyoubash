@@ -123,3 +123,54 @@ result=((((10+5*3) - 7) / 2))
 echo $result #9
 ```
 
+# Stream, pipes and lists
+
+> Streams
+
+There are three descriptors
+
+|Code|Descriptor|Description
+|---|---|---|
+|0|stdin|The standard input.
+|1|stdout|The standard output.
+|2|stderr|The errors output.
+
+Operators, used for streams
+
+|Operator|Description
+|---|---
+|>|Redirecting output
+|&>|Redirecting output and error output
+|&>>|Appending redirected output and error output
+|<|Redirecting input
+|<<|[Here documents](http://tldp.org/LDP/abs/html/here-docs.html) syntax
+|<<<|[Here strings](http://www.tldp.org/LDP/abs/html/x17837.html)
+
+> [Redirection](https://stackoverflow.com/a/818284) 
+
+`>` - means send to as a whole completed file, overwriting target if exist
+
+`>>` - means send in addiction 
+
+> Pipes
+
+By using pipes we can send output of one program to input of another
+
+```bash
+ls -l | grep .md$ | less
+```
+
+> List of commands 
+
+**A list of commands is a sequence of one or more pipelines separated by ;,&, && or || operator.**
+
+     # command2 will be executed if, and only if, command1 finishes successfully (returns 0 exit status)  
+     command1 && command2  
+   
+  The OR-list has the form:  
+   
+    # command2 will be executed if, and only if, command finishes unsuccessfully (returns code of error)  
+    command1 || command2  
+
+
+
