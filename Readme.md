@@ -1,3 +1,5 @@
+## Cheat sheet 🗒️
+
 # Creating file
 
 > Creating a bash script file
@@ -26,7 +28,7 @@ chmod +x example.bash
 echo "Hello, $(whoami), directory: $PWD"
 ```
 
-> Positional variables:
+> Positional variables
 
 - $0 - script’s name
 - $1 .. $9 -  The parametrs list elements from 1 to 9
@@ -43,5 +45,51 @@ echo "Hello, $(whoami), directory: $PWD"
 
 echo "Filename: $0, first arg: $1, second arg: $2"
 ```
+
+
+# Arrays
+
+**IFS (Input Field Separator)** - character that separates elements in array (default is empty state)
+
+
+> Creating array
+
+```bash
+
+fruits[0]=Apple
+fruits[1]=Pear
+
+# to log all values
+
+echo ${fruits[*]} 
+echo ${fruits[@]}
+
+#or
+
+vegetables=(Carrot Cucumber)
+
+
+```
+
+
+> Slicing arrays
+
+```bash
+echo ${fruits[*]:0:1} # Apple
+echo ${@:1:2} # slice of positional parameters
+```
+
+> Adding elements into an array
+
+```bash
+fruits=(Banana ${fruits[*]}  Mango)
+```
+
+> Deleting elements
+
+```bash
+unset fruits[0]
+```
+
 
 
