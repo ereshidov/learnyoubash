@@ -172,5 +172,36 @@ ls -l | grep .md$ | less
     # command2 will be executed if, and only if, command finishes unsuccessfully (returns code of error)  
     command1 || command2  
 
+# If statement
 
+```bash
+# Single-line
 
+if [[ 1 -eq 1 ]]; then echo "true"; fi
+
+# Multi-line
+
+if [[ 1 -eq 1 ]]; then
+  echo "true"
+fi
+```
+
+# Switch case statement
+
+```bash
+case "$extension" in
+  "jpg"|"jpeg")
+    echo "It's image with jpeg extension."
+  ;;
+  "png")
+    echo "It's image with png extension."
+  ;;
+  "gif")
+    echo "Oh, it's a giphy!"
+  ;;
+  *)
+    echo "Woops! It's not image!"
+  ;;
+esac
+
+```
