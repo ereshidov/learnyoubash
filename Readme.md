@@ -203,5 +203,49 @@ case "$extension" in
     echo "Woops! It's not image!"
   ;;
 esac
+```
+
+# Loops
+
+> for loop
+
+```bash
+for arg in elem1 elem2 ... elemN
+do
+  # statement
+done
+
+for (( i = 0; i < 10; i++ )); do
+  echo $i
+done
+
+# single line
+
+for i in {1..5}; do echo $i; done
+```
+
+For example, move all .bash file from home directory to another and make them executable
+
+```bash
+#!bin/bash
+
+for FILE in $HOME/*.bash
+do
+  mv "$FILE" "${HOME}/downloads"
+  chmod +x "${HOME}/downloads/${FILE}"
+done
+```
+
+**Values can also be wildcards or brace expansion**
+
+
+> while loop
+
+```bash
+#!bin/bash
+x=0
+while [[ $x -lt 10 ]]; do 
+ echo $x
+done
 
 ```
